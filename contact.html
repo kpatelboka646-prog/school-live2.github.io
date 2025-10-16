@@ -488,7 +488,7 @@
         } else {
             // First time - show the form
             formContainer.innerHTML = `
-                <form action="https://formspree.io/f/xblzaqjr" method="POST" class="contact-form" id="contactForm">
+                <form action="https://formspree.io/f/movkybzw" method="POST" class="contact-form" id="contactForm">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required placeholder="Enter your full name">
@@ -544,7 +544,7 @@
                 const formData = new FormData(contactForm);
 
                 // Submit to Formspree
-                fetch('https://formspree.io/f/xblzaqjr', {
+                fetch('https://formspree.io/f/movkybzw', {
                     method: 'POST',
                     body: formData,
                     headers: {
@@ -580,4 +580,5 @@
         }
     </script>
 </body>
+
 </html>
