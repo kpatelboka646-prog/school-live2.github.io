@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(contactForm);
 
             // Submit to Formspree
-            fetch('https://formspree.io/f/xblzaqjr', {
+            fetch('https://formspree.io/f/movkybzw', {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -314,5 +314,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize
     showSlide(0);
     showTestimonial(0);
+
 
 });
