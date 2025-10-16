@@ -1,0 +1,17 @@
+## 🗂️ File Structure
+
+sns-school-website/
+├── index.html # Main homepage
+├── style.css # All styling rules
+├── script.js # JavaScript functionality
+├── notifications.html # Notifications page
+├── article1.html # Article: Building Leaders
+├── article2.html # Article: Global Impact
+├── article3.html # Article: World Excellence
+├── about.html # About Us page
+├── programs.html # Programs page
+├── admissions.html # Admissions page
+├── campus-life.html # Campus Life page
+├── contact.html # Contact page
+├── logo.png # School logo image
+└── README.md # This file

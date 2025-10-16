@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SNS School Balotra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background-color: var(--primary-white);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .page-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .page-hero {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #a41034 0%, #8a0d2a 100%);
+            border-radius: 16px;
+            color: var(--primary-white);
+        }
+
+        .page-hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, var(--primary-white) 0%, #f8f8f8 100%);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-red) 0%, #8a0d2a 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .contact-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contact-card:hover {
+            border-color: var(--accent-red);
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(164, 16, 52, 0.15);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--accent-red) 0%, #8a0d2a 100%);
+            color: var(--primary-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover .contact-icon {
+            transform: rotateY(360deg);
+        }
+
+        .contact-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary-black);
+        }
+
+        .contact-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--light-black);
+            margin-bottom: 8px;
+        }
+
+        .contact-card a {
+            color: var(--accent-red);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .contact-card a:hover {
+            color: var(--primary-black);
+            transform: translateX(3px);
+        }
+
+        .map-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--primary-black);
+            letter-spacing: -0.5px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .contact-form-section {
+            background: linear-gradient(135deg, #f8f8f8 0%, var(--primary-white) 100%);
+            border-radius: 20px;
+            padding: 45px 30px;
+            margin-bottom: 50px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-align: center;
+            color: var(--primary-black);
+            letter-spacing: -0.5px;
+        }
+
+        .form-subtitle {
+            font-size: 15px;
+            color: var(--light-black);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-black);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            font-family: 'Roboto Mono', monospace;
+            transition: all 0.3s ease;
+            background-color: var(--primary-white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-red);
+            box-shadow: 0 0 0 4px rgba(164, 16, 52, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--accent-red) 0%, #8a0d2a 100%);
+            color: var(--primary-white);
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 16px rgba(164, 16, 52, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(164, 16, 52, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .submit-btn:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .submit-btn:disabled:hover {
+            transform: none;
+        }
+
+        .form-message {
+            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .form-message.success {
+            background-color: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+        }
+
+        .form-message.already-submitted {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            color: #856404;
+        }
+
+        .form-message h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .form-message p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .form-message a {
+            color: inherit;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            color: var(--accent-red);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            padding: 12px 20px;
+            border: 2px solid var(--accent-red);
+            border-radius: 10px;
+        }
+
+        .back-btn:hover {
+            background-color: var(--accent-red);
+            color: var(--primary-white);
+            transform: translateX(-5px);
+        }
+
+        /* Mobile First - Small screens (default) */
+        @media (max-width: 767px) {
+            .page-hero h1 {
+                font-size: 32px;
+            }
+
+            .page-hero p {
+                font-size: 16px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-section {
+                padding: 30px 20px;
+            }
+
+            .map-container {
+                height: 300px;
+            }
+
+            .form-title {
+                font-size: 24px;
+            }
+        }
+
+        /* Tablets */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .page-hero h1 {
+                font-size: 38px;
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .map-container {
+                height: 350px;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .page-hero h1 {
+                font-size: 42px;
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .map-container {
+                height: 450px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <div class="logo-section">
+                <a href="index.html">
+                    <img src="logo.png" alt="SNS School Logo" class="logo-img">
+                </a>
+                <div class="logo-text">
+                    <span class="line1">SNS</span>
+                    <span class="line2">School</span>
+                    <span class="line3">Balotra</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="page-hero">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you. Reach out to us for admissions, inquiries, or feedback.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <h3>Call Us</h3>
+                <p>Mon-Sat: 9 AM - 5 PM</p>
+                <p><a href="tel:+916377663613">+91 6377663613</a></p>
+                <p><a href="tel:+919876543210">+91 9876543210</a></p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3>Email Us</h3>
+                <p>24 hour response</p>
+                <p><a href="mailto:info@snsschool.edu.in">info@snsschool.edu.in</a></p>
+                <p><a href="mailto:admissions@snsschool.edu.in">admissions@snsschool.edu.in</a></p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h3>Visit Us</h3>
+                <p>SNS School Campus</p>
+                <p>Balotra Road, Near City Hospital</p>
+                <p>Balotra, Rajasthan - 344022</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <h3>Office Hours</h3>
+                <p>Monday - Friday: 9 AM - 5 PM</p>
+                <p>Saturday: 9 AM - 2 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <h2 class="section-title">Find Us on Map</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.3825802386!2d72.39311433976326!3d25.832018647185667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c4eaa06ccb9%3A0x5f3c0c0d1b1a8b0!2sBalotra%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1234567890"
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="contact-form-section">
+            <h2 class="form-title">Send Us a Message</h2>
+            <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+
+            <div id="formContainer">
+                <!-- Form will be rendered here by JavaScript -->
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </a>
+    </main>
+
+    <script>
+        // ONE-TIME FORM SUBMISSION - localStorage based security
+        const hasSubmitted = localStorage.getItem('snsContactFormSubmitted');
+        const formContainer = document.getElementById('formContainer');
+
+        if (hasSubmitted === 'true') {
+            // User has already submitted - show message
+            formContainer.innerHTML = `
+                <div class="form-message already-submitted">
+                    <h3><i class="fa-solid fa-check-circle"></i> Form Already Submitted</h3>
+                    <p>Thank you for contacting us! You have already submitted the contact form.</p>
+                    <p>Our team will respond to your previous inquiry within 24 hours.</p>
+                    <p style="margin-top: 15px;">For urgent matters, please call us at <a href="tel:+916377663613">+91 6377663613</a></p>
+                </div>
+            `;
+        } else {
+            // First time - show the form
+            formContainer.innerHTML = `
+                <form action="https://formspree.io/f/xblzaqjr" method="POST" class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="admission">Admission Inquiry</option>
+                            <option value="general">General Information</option>
+                            <option value="academics">Academics</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us more about your inquiry..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            `;
+
+            // Form submission handler
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Disable button immediately
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+                // Prepare form data
+                const formData = new FormData(contactForm);
+
+                // Submit to Formspree
+                fetch('https://formspree.io/f/xblzaqjr', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // SUCCESS - Mark as submitted in localStorage
+                        localStorage.setItem('snsContactFormSubmitted', 'true');
+
+                        // Show success message
+                        formContainer.innerHTML = `
+                            <div class="form-message success">
+                                <h3><i class="fa-solid fa-check-circle"></i> Message Sent Successfully!</h3>
+                                <p>Thank you for contacting SNS School Balotra.</p>
+                                <p>We have received your message and will respond within 24 hours.</p>
+                                <p style="margin-top: 15px;">For urgent matters, please call us at <a href="tel:+916377663613">+91 6377663613</a></p>
+                            </div>
+                        `;
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    // ERROR - Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+                    alert('There was an error submitting the form. Please try again or contact us directly at +91 6377663613');
+                    console.error('Form submission error:', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

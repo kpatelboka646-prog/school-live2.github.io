@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNS School Balotra - Educating Future Leaders</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Montserrat Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <img src="logo.png" alt="SNS School Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="line1">SNS</span>
+                    <span class="line2">School</span>
+                    <span class="line3">Balotra</span>
+                </div>
+            </div>
+            <div class="header-icons">
+                <button class="notification-btn" id="notificationBtn" aria-label="Notifications">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+                <button class="menu-btn" id="menuBtn" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <h1 class="hero-title">
+                We <span class="underline-link" data-slide="0">educate leaders</span> who make<br>
+                <span class="underline-link" data-slide="1">a difference</span> in<br>
+                <span class="underline-link" data-slide="2">the world.</span>
+            </h1>
+
+            <!-- Image Slider -->
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="slide active">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=500&fit=crop" alt="Students collaborating">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Building Tomorrow's Leaders</h3>
+                            <p>Our comprehensive education programs empower students with critical thinking, leadership skills, and innovative mindsets to excel in a rapidly changing world.</p>
+                            <a href="article1.html" class="read-more-btn">
+                                Read more <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop" alt="Global impact">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Making a Global Impact</h3>
+                            <p>Through community engagement, social initiatives, and real-world projects, our students learn to create meaningful change and contribute positively to society.</p>
+                            <a href="article2.html" class="read-more-btn">
+                                Read more <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800&h=500&fit=crop" alt="World class education">
+                        </div>
+                        <div class="slide-content">
+                            <h3>World-Class Excellence</h3>
+                            <p>With state-of-the-art facilities, experienced faculty, and international collaborations, we provide an educational experience that prepares students for global citizenship.</p>
+                            <a href="article3.html" class="read-more-btn">
+                                Read more <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="nav-arrow prev-arrow" id="prevBtn" aria-label="Previous slide">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="nav-arrow next-arrow" id="nextBtn" aria-label="Next slide">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2>About SNS School Balotra</h2>
+                    <p>Founded in 1999, SNS School Balotra has been at the forefront of providing quality education that blends traditional values with modern teaching methodologies. Our institution is built on the pillars of academic excellence, character building, and holistic development.</p>
+                    <p>We believe in nurturing each child's unique potential, fostering curiosity, and instilling a lifelong love for learning. Our dedicated faculty and state-of-the-art infrastructure create an environment where students can thrive academically, socially, and emotionally.</p>
+                    <div class="principal-message">
+                        <p>"At SNS School, we are committed to shaping future leaders who will make a positive impact on society. Our student-centric approach ensures that every child receives the attention and guidance they need to excel."</p>
+                        <p class="principal-name">- Dr. Rajesh Sharma, Principal</p>
+                    </div>
+                    <a href="about.html" class="section-btn">Learn More About Us</a>
+                </div>
+                <div class="principal-photo">
+                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=500&h=600&fit=crop" alt="Principal of SNS School">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section class="academics-section">
+        <div class="container">
+            <h2 class="section-title">Our Academic Programs</h2>
+            <div class="academics-grid">
+                <div class="academic-card">
+                    <div class="academic-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3>Primary Education</h3>
+                    <p>Foundational learning with a focus on literacy, numeracy, and holistic development for young minds. Our primary curriculum emphasizes experiential learning.</p>
+                </div>
+                <div class="academic-card">
+                    <div class="academic-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3>Secondary Education</h3>
+                    <p>Comprehensive curriculum with science, mathematics, languages, and social sciences. We focus on building strong conceptual foundations.</p>
+                </div>
+                <div class="academic-card">
+                    <div class="academic-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3>Senior Secondary</h3>
+                    <p>Specialized streams in Science, Commerce, and Humanities with career-focused guidance and preparation for competitive examinations.</p>
+                </div>
+                <div class="academic-card">
+                    <div class="academic-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3>Co-curricular Activities</h3>
+                    <p>Sports, arts, music, and clubs to ensure all-round personality development. We offer over 20 different activities for students.</p>
+                </div>
+            </div>
+            <div class="btn-center">
+                <a href="programs.html" class="section-btn">Explore All Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Campus Life & Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-scroll">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1588072432836-4b4f2ca7ee08?w=400&h=300&fit=crop" alt="Modern Classroom">
+                        <div class="gallery-label">Modern Classrooms</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=300&fit=crop" alt="Smart Labs">
+                        <div class="gallery-label">Smart Labs</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" alt="Sports Complex">
+                        <div class="gallery-label">Sports Complex</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400&h=300&fit=crop" alt="Library">
+                        <div class="gallery-label">Library</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=300&fit=crop" alt="Arts & Music">
+                        <div class="gallery-label">Arts & Music</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1555854879-b4b8c1200a6c?w=400&h=300&fit=crop" alt="Boarding Life">
+                        <div class="gallery-label">Boarding Life</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=300&h=200&fit=crop" alt="School Event">
+                        <div class="gallery-label">School Events</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=300&h=200&fit=crop" alt="Classroom Activity">
+                        <div class="gallery-label">Class Activities</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=300&h=200&fit=crop" alt="Sports Day">
+                        <div class="gallery-label">Sports Day</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1541336032412-2048a678540d?w=300&h=200&fit=crop" alt="Annual Function">
+                        <div class="gallery-label">Annual Function</div>
+                    </div>
+                </div>
+                <button class="scroll-btn scroll-left" id="scrollLeft">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="scroll-btn scroll-right" id="scrollRight">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="btn-center">
+                <a href="gallery.html" class="section-btn">View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What People Say About Us</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        "SNS School has provided an excellent environment for my child's growth. The teachers are dedicated, and the curriculum is well-balanced between academics and extracurricular activities."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" alt="Parent">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mrs. Priya Mehta</h4>
+                            <p>Parent</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        "The facilities and teaching methods at SNS School are exceptional. I've grown not just academically but also as a confident individual ready to face future challenges."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Student">
+                        </div>
+                        <div class="author-info">
+                            <h4>Rahul Verma</h4>
+                            <p>Class XII Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        "My years at SNS School laid a strong foundation for my career. The values and knowledge imparted here have been instrumental in my professional success."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Alumni">
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Anjali Singh</h4>
+                            <p>Alumni, Class of 2010</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" data-slide="0"></div>
+                    <div class="testimonial-dot" data-slide="1"></div>
+                    <div class="testimonial-dot" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section class="admissions-section">
+        <div class="container">
+            <h2 class="section-title">Admissions</h2>
+            <div class="admissions-container">
+                <div class="admissions-content">
+                    <h3>Admission Process</h3>
+                    <p>We are now accepting applications for the academic year 2025-26. Limited seats available for classes Nursery to XII.</p>
+                    
+                    <div class="admissions-process">
+                        <h4>Admission Process</h4>
+                        <ol>
+                            <li>Submit Application Form</li>
+                            <li>Entrance Assessment (for Classes I and above)</li>
+                            <li>Interaction with Principal</li>
+                            <li>Admission Confirmation & Fee Payment</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="admissions-form">
+                    <h3>Contact for Admissions</h3>
+                    <form action="https://formspree.io/f/xblzaqjr" method="POST" class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="class">Class Interested In *</label>
+                            <select id="class" name="class" required>
+                                <option value="">Select a class</option>
+                                <option value="nursery">Nursery</option>
+                                <option value="kg">KG</option>
+                                <option value="1">Class I</option>
+                                <option value="2">Class II</option>
+                                <option value="3">Class III</option>
+                                <option value="4">Class IV</option>
+                                <option value="5">Class V</option>
+                                <option value="6">Class VI</option>
+                                <option value="7">Class VII</option>
+                                <option value="8">Class VIII</option>
+                                <option value="9">Class IX</option>
+                                <option value="10">Class X</option>
+                                <option value="11">Class XI</option>
+                                <option value="12">Class XII</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Any specific questions or comments..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">News & Events</h2>
+            <div class="news-container">
+                <div class="news-content">
+                    <p>Stay updated with the latest happenings at SNS School Balotra. From academic achievements to cultural events, we keep you informed about everything happening in our school community.</p>
+                    <div class="blog-preview">
+                        <h3>Latest from Our Blog</h3>
+                        <p>Visit our official blog for the latest news, events, and announcements from SNS School Balotra.</p>
+                        <a href="https://ibbchoudhary.blogspot.com" target="_blank" class="section-btn">Visit Our Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3574.991328061987!2d72.24018931503264!3d25.843159983572256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39412f5c7c93e5c5%3A0x5e3e1b4a3c3c3c3c!2sBalotra%2C%20Rajasthan%2C%20India!5e0!3m2!1sen!2sin!4v1647851234567!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <p>SNS School Balotra<br>Education City, Jodhpur Road<br>Balotra, Rajasthan 344022</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 6377663613<br>+91 2912-254367</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@snsschool.edu.in<br>admissions@snsschool.edu.in</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Working Hours</h3>
+                            <p>Monday - Saturday: 8:00 AM - 4:00 PM<br>Office Hours: 9:00 AM - 3:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="SNS School Logo">
+                        <div class="footer-logo-text">
+                            <span class="line1">SNS</span>
+                            <span class="line2">School</span>
+                            <span class="line3">Balotra</span>
+                        </div>
+                    </div>
+                    <p class="footer-about-text">SNS School Balotra is committed to providing quality education that empowers students to become responsible global citizens and future leaders.</p>
+                    <div class="footer-social">
+                        <a href="https://youtube.com/@snsschoolbalotra" target="_blank" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://instagram.com/snsschoolbalotra" target="_blank" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/snsschoolbalotra" target="_blank" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/916377663613" target="_blank" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <div class="accreditation">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/CBSE_Logo.svg/1200px-CBSE_Logo.svg.png" alt="CBSE Logo">
+                        <p>Affiliated to Central Board of Secondary Education, New Delhi</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Academic Programs</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="https://ibbchoudhary.blogspot.com" target="_blank">News & Blog</a></li>
+                        <li><a href="notifications.html">Notifications</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-heading">Important Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">School Policies</a></li>
+                        <li><a href="#">Career Opportunities</a></li>
+                        <li><a href="#">Parent Portal</a></li>
+                        <li><a href="#">Student Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 SNS School Balotra. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <!-- Close Button (Cross) -->
+        <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://ibbchoudhary.blogspot.com" target="_blank">Blog</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+            </ul>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://youtube.com/@snsschoolbalotra" target="_blank" class="social-link youtube" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://instagram.com/snsschoolbalotra" target="_blank" class="social-link instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/snsschoolbalotra" target="_blank" class="social-link facebook" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/916377663613" target="_blank" class="social-link whatsapp" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
